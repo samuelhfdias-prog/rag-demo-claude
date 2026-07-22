@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+.env
+.env.local
+*.log
+
+# Banco SQLite local (dados de cada ambiente, não deve ir para o Git)
+backend/data/
+
+# Build do front-end (Vite)
+frontend/dist/
