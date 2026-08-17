@@ -1,4 +1,8 @@
 export function similaridadeDeCosseno(a: number[], b: number[]): number {
+  if (a.length === 0 || a.length !== b.length) {
+    return 0;
+  }
+
   let produtoEscalar = 0;
   let normaA = 0;
   let normaB = 0;
