@@ -4,8 +4,8 @@ export interface ChunkOptions {
 }
 
 export function chunkText(texto: string, options: ChunkOptions = {}): string[] {
-  const tamanho = options.tamanho ?? 500;
-  const sobreposicao = options.sobreposicao ?? 80;
+  const tamanho = Math.max(1, Math.floor(options.tamanho ?? 500));
+  const sobreposicao = Math.max(0, Math.min(Math.floor(options.sobreposicao ?? 80), tamanho - 1));
 
   const textoLimpo = texto.replace(/\s+/g, " ").trim();
   const chunks: string[] = [];
